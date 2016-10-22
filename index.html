@@ -15,49 +15,58 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>
-      Reading list
-    </h1>
+    <div id="reading_list">
+      <h1>
+        Reading list
+      </h1>
 
-    <h3 data-toggle="collapse" data-target="#papers-past" style="cursor: pointer;">
-      Past<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-    </h3>
-    <div id="papers-past" class="container-fluid collapse">
-      <div id="app-past">
-        <ol>
-          <li v-for="paper in papers">
-            <div v-html="paper.text" class="well well-sm paper-past" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-            </div>
-          </li>
-        </ol>
+      <h3 data-toggle="collapse" data-target="#papers-past" style="cursor: pointer;">
+        Past<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+      </h3>
+      <div id="papers-past" class="container-fluid collapse">
+        <div id="app-past">
+          <ol>
+            <li v-for="paper in papers">
+              <div v-html="paper.text" class="well well-sm paper-past" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 data-toggle="collapse" data-target="#papers-current" style="cursor: pointer;">
+        Present<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+      </h3>
+      <div id="papers-current" class="container-fluid collapse">
+        <div id="app-current">
+          <ol>
+            <li v-for="paper in papers">
+              <div v-html="paper.text" class="well well-sm paper-current" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 data-toggle="collapse" data-target="#papers-future" style="cursor: pointer;">
+        Future<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+      </h3>
+      <div id="papers-future" class="container-fluid collapse">
+        <div id="app-future">
+          <ol>
+            <li v-for="paper in papers">
+              <div v-html="paper.text" class="well well-sm paper-future" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
 
-    <h3 data-toggle="collapse" data-target="#papers-current" style="cursor: pointer;">
-      Present<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-    </h3>
-    <div id="papers-current" class="container-fluid collapse">
-      <div id="app-current">
-        <ol>
-          <li v-for="paper in papers">
-            <div v-html="paper.text" class="well well-sm paper-current" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <h3 data-toggle="collapse" data-target="#papers-future" style="cursor: pointer;">
-      Future<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-    </h3>
-    <div id="papers-future" class="container-fluid collapse">
-      <div id="app-future">
-        <ol>
-          <li v-for="paper in papers">
-            <div v-html="paper.text" class="well well-sm paper-future" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-            </div>
-          </li>
-        </ol>
+    <!-- Footer -->
+    <div id="footer">
+      <div style="align: center;">
+        Created by Cannon Lewis with Vue, Bootstrap, and JQuery. Thanks to <b><a href="https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap/blob/master/README.md">songrotek</a></b> for the reading list.
       </div>
     </div>
 
