@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>RUML-rg</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    /* External includes */
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+
+    /* Local includes */
+    <script type='text/javascript' url='./main.js'></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1 style="margin-left: 10px">
+      Reading list
+    </h1>
+
+    <div class="container-fluid">
+      <div id="app">
+        <ol>
+          <li v-for="todo in todos">
+            <div class="well well-sm" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px">
+              {{ todo.text }}
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    
+  </body>
+</html>
