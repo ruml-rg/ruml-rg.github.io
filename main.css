@@ -13,14 +13,14 @@ ol {
   list-style: none;
 }
 
-h1 {
-  margin-left: 10px;
+h2 {
+  margin-left: 20px;
   margin-top: 0px;
   padding-top: 10px;
 }
 
 h3 {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 body {
@@ -67,4 +67,22 @@ span.glyphicon-menu-hamburger {
 #footer a {
   font-style: normal;
   color: white;
+}
+
+#title {
+  padding-left: 10px;
+  /*background-color: rgba(94, 96, 98, 0.5);*/
+  /*border-left: 10px solid black;*/
+  /*border-top: 10px solid black;*/
+}
+
+#title h1 {
+  color: rgba(0, 36, 106, 1);
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#main {
+  border-left: 10px solid black;
 }

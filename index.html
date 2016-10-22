@@ -15,57 +15,71 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div id="reading_list">
-      <h1>
-        Reading list
-      </h1>
-
-      <h3 data-toggle="collapse" data-target="#papers-past" style="cursor: pointer;">
-        Past<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-      </h3>
-      <div id="papers-past" class="container-fluid collapse">
-        <div id="app-past">
-          <ol>
-            <li v-for="paper in papers">
-              <div v-html="paper.text" class="well well-sm paper-past" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-              </div>
-            </li>
-          </ol>
-        </div>
+    <div id="main">
+      <div id="title">
+        <h1>
+          RUML-rg
+        </h1>
       </div>
 
-      <h3 data-toggle="collapse" data-target="#papers-current" style="cursor: pointer;">
-        Present<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-      </h3>
-      <div id="papers-current" class="container-fluid collapse">
-        <div id="app-current">
-          <ol>
-            <li v-for="paper in papers">
-              <div v-html="paper.text" class="well well-sm paper-current" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-              </div>
-            </li>
-          </ol>
-        </div>
+      <div style="margin-left: 10px; margin-top: 10px;">
+        <p>
+          The Rice Undergraduate Machine Learning Reading Group (RUML-rg) is a loose association of undergraduates interested in discovering more about modern methods in machine learning and artificial intelligence, outside of the regular <a href="http://www.cs.rice.edu/academics/undergraduate-studies/">Rice curriculum</a>. The reading list below displays previously read papers, the papers to be read for the next meeting, and all planned papers (based on the list <b><a href="https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap/blob/master/README.md">here</a></b>). Check the facebook page for the date and location of our next meeting!
+        </p>
       </div>
 
-      <h3 data-toggle="collapse" data-target="#papers-future" style="cursor: pointer;">
-        Future<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
-      </h3>
-      <div id="papers-future" class="container-fluid collapse">
-        <div id="app-future">
-          <ol>
-            <li v-for="paper in papers">
-              <div v-html="paper.text" class="well well-sm paper-future" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
-              </div>
-            </li>
-          </ol>
+      <div id="reading_list">
+        <h2>
+          Reading list
+        </h2>
+
+        <h3 data-toggle="collapse" data-target="#papers-past" style="cursor: pointer;">
+          Past<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+        </h3>
+        <div id="papers-past" class="container-fluid collapse">
+          <div id="app-past">
+            <ol>
+              <li v-for="paper in papers">
+                <div v-html="paper.text" class="well well-sm paper-past" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 data-toggle="collapse" data-target="#papers-current" style="cursor: pointer;">
+          Present<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+        </h3>
+        <div id="papers-current" class="container-fluid collapse in">
+          <div id="app-current">
+            <ol>
+              <li v-for="paper in papers">
+                <div v-html="paper.text" class="well well-sm paper-current" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 data-toggle="collapse" data-target="#papers-future" style="cursor: pointer;">
+          Future<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+        </h3>
+        <div id="papers-future" class="container-fluid collapse">
+          <div id="app-future">
+            <ol>
+              <li v-for="paper in papers">
+                <div v-html="paper.text" class="well well-sm paper-future" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
     <div id="footer">
-      <div style="align: center;">
+      <div>
         Created by Cannon Lewis with Vue, Bootstrap, and JQuery. Thanks to <b><a href="https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap/blob/master/README.md">songrotek</a></b> for the reading list.
       </div>
     </div>
