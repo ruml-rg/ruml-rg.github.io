@@ -15,16 +15,46 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1 style="margin-left: 10px">
+    <h1>
       Reading list
     </h1>
 
-    <div class="container-fluid">
-      <div id="app">
+    <h3 data-toggle="collapse" data-target="#papers-past" style="cursor: pointer;">
+      Past<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+    </h3>
+    <div id="papers-past" class="container-fluid collapse">
+      <div id="app-past">
         <ol>
-          <li v-for="todo in todos">
-            <div class="well well-sm" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px">
-              {{ todo.text }}
+          <li v-for="paper in papers">
+            <div v-html="paper.text" class="well well-sm paper-past" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 data-toggle="collapse" data-target="#papers-current" style="cursor: pointer;">
+      Present<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+    </h3>
+    <div id="papers-current" class="container-fluid collapse">
+      <div id="app-current">
+        <ol>
+          <li v-for="paper in papers">
+            <div v-html="paper.text" class="well well-sm paper-current" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 data-toggle="collapse" data-target="#papers-future" style="cursor: pointer;">
+      Future<span class="glyphicon glyphicon-menu-hamburger" style="padding:10px"/>
+    </h3>
+    <div id="papers-future" class="container-fluid collapse">
+      <div id="app-future">
+        <ol>
+          <li v-for="paper in papers">
+            <div v-html="paper.text" class="well well-sm paper-future" style="margin-top: 7px; margin-bottom: 0px; margin-left: -20px; word-wrap: break-word">
             </div>
           </li>
         </ol>

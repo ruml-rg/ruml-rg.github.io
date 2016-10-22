@@ -1,3 +1,30 @@
 ol {
   list-style: none;
 }
+
+h1 {
+  margin-left: 10px;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+.paper-future {
+  background-color: rgba(94, 96, 98, 0.5);
+  color: white;
+}
+
+.paper-current {
+  background-color: rgba(0, 36, 106, 0.75);
+  color: white;
+}
+
+.paper-past {
+  background-color: rgba(51,153,0, 1);
+  color: white;
+}
+
+span.glyphicon-menu-hamburger {
+  font-size: .8em;
+}
