@@ -1,5 +1,5 @@
 var current_pointer = 1
-var future_pointer = 5
+var future_pointer = 3
 
 $(function(){
   $.get('/roadmap_mod.txt', function(data){
